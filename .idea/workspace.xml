@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09264e91-854d-4291-820f-3711963a446d" name="Changes" comment="" />
+    <list default="true" id="09264e91-854d-4291-820f-3711963a446d" name="Changes" comment="Traduction UML">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ojdbc8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercicesJDBC/ex1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/myconnections/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/myconnections/ODBCConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjetAPI2.4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetAPI2.4.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Adresse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Adresse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Taxi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taxi.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,10 +46,20 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm"
+    "last_opened_file_path": "/Users/bilal/Desktop/API2/ProjetAPI2.4",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -46,8 +69,22 @@
       <option name="presentableId" value="Default" />
       <updated>1675609440491</updated>
       <workItem from="1675609441610" duration="10000" />
-      <workItem from="1675611344960" duration="4376000" />
+      <workItem from="1675611344960" duration="10759000" />
+      <workItem from="1676900802463" duration="76000" />
+      <workItem from="1676900901883" duration="36000" />
+      <workItem from="1676901002714" duration="1043000" />
+      <workItem from="1676902258001" duration="1432000" />
+      <workItem from="1676914034189" duration="13047000" />
+      <workItem from="1677063402695" duration="1242000" />
     </task>
+    <task id="LOCAL-00001" summary="Traduction UML">
+      <created>1675766561030</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675766561030</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -63,5 +100,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Traduction UML" />
+    <option name="LAST_COMMIT_MESSAGE" value="Traduction UML" />
   </component>
 </project>
