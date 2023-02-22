@@ -5,6 +5,8 @@ import java.util.Objects;
 /**
  * classe client du Taxi
  * @outhor Bilal Azizi
+ * @version 1.0
+ * @see Location
  */
 public class Client {
 
@@ -29,7 +31,9 @@ public class Client {
      */
     private String tel;
 
-    //faire la doc de ceci
+    /**
+     * liste des locations
+     */
     private List<Location> location = new ArrayList<>();
 
     /**
@@ -47,7 +51,7 @@ public class Client {
      * @param nom nom du client
      * @param prenom prénom du client
      * @param tel téléphone du client
-     * @param location
+     * @param location location du client
      */
     public Client(int id, String mail, String nom, String prenom, String tel, List<Location> location) {
         this.id = id;
@@ -148,14 +152,29 @@ public class Client {
         this.tel = tel;
     }
 
+    /**
+     * getter location
+     *
+     * @return location du client
+     */
     public List<Location> getLocation() {
         return location;
     }
 
+    /**
+     * setter location
+     *
+     * @param location location du client
+     */
     public void setLocation(List<Location> location) {
         this.location = location;
     }
 
+    /**
+     * égalité de deux clients basée sur le mail
+     * @param o autre élément
+     * @return égalité ou pas
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -164,6 +183,10 @@ public class Client {
         return Objects.equals(mail, client.mail);
     }
 
+    /**
+     * calcul du hashcode du client basé sur le mail
+     * @return valeur du hashcode
+     */
     @Override
     public int hashCode() {
         return Objects.hash(mail);

@@ -1,3 +1,8 @@
+/**
+ * classe métier de la gestion d'adresse
+ * @outhour Bilal Azizi
+ * @version 1.0
+ */
 public class Adresse {
     /**
      * identifiant unique de l'adresse

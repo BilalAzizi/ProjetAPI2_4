@@ -1,5 +1,10 @@
 import java.util.Objects;
 
+/**
+ * classe métier de la gestion d'un taxi
+ * @outhour Bilal Azizi
+ * @version 1.0
+ */
 public class Taxi {
     /**
      * identifiant unique du taxi
@@ -76,22 +81,47 @@ public class Taxi {
         this.immatriculation = immatriculation;
     }
 
+    /**
+     * getter nbremaxpassagers
+     *
+     * @return nombre maximum de passagers
+     */
     public int getNbreMaxPassagers() {
         return nbreMaxPassagers;
     }
 
+    /**
+     * setter nbremaxpassagers
+     *
+     * @param nbreMaxPassagers nombre maximum de passagers
+     */
     public void setNbreMaxPassagers(int nbreMaxPassagers) {
         this.nbreMaxPassagers = nbreMaxPassagers;
     }
 
+    /**
+     * getter prixkm
+     *
+     * @return prix au kilomètre
+     */
     public double getPrixKm() {
         return prixKm;
     }
 
+    /**
+     * setter prixkm
+     *
+     * @param prixKm prix au kilomètre
+     */
     public void setPrixKm(double prixKm) {
         this.prixKm = prixKm;
     }
 
+    /**
+     * égalité de deux taxis basée sur l'immatriculation
+     * @param o autre taxi
+     * @return égalité ou pas
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -100,6 +130,10 @@ public class Taxi {
         return Objects.equals(immatriculation, taxi.immatriculation);
     }
 
+    /**
+     * calcul du hashcode du taxi basé sur l'immatriculation
+     * @return
+     */
     @Override
     public int hashCode() {
         return Objects.hash(immatriculation);
