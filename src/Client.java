@@ -51,15 +51,13 @@ public class Client {
      * @param nom nom du client
      * @param prenom prénom du client
      * @param tel téléphone du client
-     * @param location location du client
      */
-    public Client(int id, String mail, String nom, String prenom, String tel, List<Location> location) {
+    public Client(int id, String mail, String nom, String prenom, String tel) {
         this.id = id;
         this.mail = mail;
         this.nom = nom;
         this.prenom = prenom;
         this.tel = tel;
-        this.location = location;
     }
 
     /**

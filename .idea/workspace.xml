@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09264e91-854d-4291-820f-3711963a446d" name="Changes" comment="ex1 sql">
+    <list default="true" id="09264e91-854d-4291-820f-3711963a446d" name="Changes" comment="java doc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Adresse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Adresse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Taxi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taxi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +65,7 @@
       <workItem from="1676901002714" duration="1043000" />
       <workItem from="1676902258001" duration="1432000" />
       <workItem from="1676914034189" duration="13047000" />
-      <workItem from="1677063402695" duration="8690000" />
+      <workItem from="1677063402695" duration="10592000" />
     </task>
     <task id="LOCAL-00001" summary="Traduction UML">
       <created>1675766561030</created>
@@ -85,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677064875893</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="java doc">
+      <created>1677090440491</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677090440491</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +108,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Traduction UML" />
     <MESSAGE value="ex1 sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="ex1 sql" />
+    <MESSAGE value="java doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="java doc" />
   </component>
 </project>
