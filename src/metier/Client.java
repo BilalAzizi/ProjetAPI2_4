@@ -1,9 +1,11 @@
+package metier;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 /**
- * classe client du Taxi
+ * classe client du metier.Taxi
  * @outhor Bilal Azizi
  * @version 1.0
  * @see Location
@@ -188,5 +190,17 @@ public class Client {
     @Override
     public int hashCode() {
         return Objects.hash(mail);
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "id=" + id +
+                ", mail='" + mail + '\'' +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", tel='" + tel + '\'' +
+                ", location=" + location +
+                '}';
     }
 }

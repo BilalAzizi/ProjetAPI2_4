@@ -1,3 +1,6 @@
+package metier;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -18,7 +21,7 @@ public class Location {
     /**
      * date de la location
      */
-    private String dateloc;
+    private LocalDate dateloc;
     /**
      * Kilomètre total de la location
      */
@@ -58,7 +61,7 @@ public class Location {
      * @param adrDepart adresse de départ
      * @param location info de la location
      */
-    public Location(int id, String dateloc, int kmtotal, double cout, Client client, Adresse adrDepart, List<Infos> location) {
+    public Location(int id, LocalDate dateloc, int kmtotal, double cout, Client client, Adresse adrDepart, List<Infos> location) {
         this.id = id;
         this.dateloc = dateloc;
         this.kmtotal = kmtotal;
@@ -91,7 +94,7 @@ public class Location {
      *
      * @return date de la location
      */
-    public String getDateloc() {
+    public LocalDate getDateloc() {
         return dateloc;
     }
 
@@ -100,7 +103,7 @@ public class Location {
      *
      * @param dateloc date de la location
      */
-    public void setDateloc(String dateloc) {
+    public void setDateloc(LocalDate dateloc) {
         this.dateloc = dateloc;
     }
 

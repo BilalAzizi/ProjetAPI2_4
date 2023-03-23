@@ -1,3 +1,7 @@
+package metier;
+
+import metier.Taxi;
+
 /**
  * classe métier de la gestion d'infos
  * @outhour Bilal Azizi

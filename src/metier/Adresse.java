@@ -1,3 +1,5 @@
+package metier;
+
 /**
  * classe métier de la gestion d'adresse
  * @outhour Bilal Azizi
