@@ -1,6 +1,7 @@
 package mvp.model;
 
 import metier.Client;
+import metier.Taxi;
 
 import java.math.BigDecimal;
 import java.sql.PreparedStatement;

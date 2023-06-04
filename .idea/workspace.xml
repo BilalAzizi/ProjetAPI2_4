@@ -2,15 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09264e91-854d-4291-820f-3711963a446d" name="Changes" comment="mise a jour">
-      <change afterPath="$PROJECT_DIR$/src/mvp/model/ClientModelDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mvp/model/ClientSpecial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mvp/model/DAOClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mvp/model/TaxiModelDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mvp/presenter/ClientPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mvp/view/ClientViewConsole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mvp/view/ClientViewInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mvp/model/AdresseModelDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mvp/model/DAOAdresse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mvp/model/DAOLocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mvp/model/DAOTaxi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mvp/model/LocationModelDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mvp/presenter/AdressePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mvp/presenter/LocationPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mvp/presenter/TaxiPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mvp/view/AdresseViewConsole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mvp/view/AdresseViewInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mvp/view/LocationViewConsole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mvp/view/LocationViewInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mvp/view/TaxiViewConsole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mvp/view/TaxiViewInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utilitaires/Utilitaire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/metier/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/metier/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metier/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/model/ClientModelDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/ClientModelDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/model/ClientSpecial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/ClientSpecial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/model/TaxiModelDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/model/TaxiModelDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/presenter/ClientPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/presenter/ClientPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/view/ClientViewConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/ClientViewConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mvp/view/ClientViewInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mvp/view/ClientViewInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,25 +54,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/bilal/Desktop/API2/ProjetAPI2.4&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/bilal/Desktop/API2/ProjetAPI2.4/src",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;oracle&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "oracle"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -115,7 +129,7 @@
       <workItem from="1682671627592" duration="597000" />
       <workItem from="1682676201770" duration="250000" />
       <workItem from="1682676500404" duration="2461000" />
-      <workItem from="1682685081383" duration="9400000" />
+      <workItem from="1682685081383" duration="58909000" />
     </task>
     <task id="LOCAL-00001" summary="Traduction UML">
       <created>1675766561030</created>
@@ -152,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679597386655</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="mise a jour">
+      <created>1684687751666</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684687751666</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
