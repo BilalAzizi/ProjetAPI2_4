@@ -1,6 +1,9 @@
 package mvp.presenter;
 
 import metier.Location;
+import metier.Taxi;
+import metier.Adresse;
+import metier.Client;
 import mvp.model.DAOLocation;
 import mvp.view.LocationViewInterface;
 import org.apache.logging.log4j.LogManager;
@@ -11,7 +14,23 @@ import java.util.List;
 public class LocationPresenter {
     private DAOLocation model;
     private LocationViewInterface view;
+
+    private ClientPresenter clientPresenter;
+    private AdressePresenter adressePresenter;
+    private TaxiPresenter taxiPresenter;
     private static final Logger logger = LogManager.getLogger(LocationPresenter.class);
+
+    public void setAdressePresenter(AdressePresenter adressePresenter) {
+        this.adressePresenter = adressePresenter;
+    }
+
+    public void setClientPresenter(ClientPresenter clientPresenter) {
+        this.clientPresenter = clientPresenter;
+    }
+
+    public void setTaxiPresenter(TaxiPresenter taxiPresenter) {
+        this.taxiPresenter = taxiPresenter;
+    }
 
     public LocationPresenter(DAOLocation model, LocationViewInterface view) {
         this.model = model;

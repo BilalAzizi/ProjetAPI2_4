@@ -24,8 +24,8 @@ public class AdresseModelDB implements DAOAdresse {
 
     @Override
     public Adresse addAdresse(Adresse adresse) {
-        String query1 = "insert into Adresse(cp,localite,rue,num) values(?,?,?,?)";
-        String query2 = "select id from Adresse where cp = ? and localite = ? and rue = ? and num = ?";
+        String query1 = "insert into APIADRESSE(cp,localite,rue,num) values(?,?,?,?)";
+        String query2 = "select id from APIADRESSE where cp = ? and localite = ? and rue = ? and num = ?";
         try(PreparedStatement pstm1= dbConnect.prepareStatement(query1);
             PreparedStatement pstm2= dbConnect.prepareStatement(query2)){
             pstm1.setInt(1,adresse.getCp());
@@ -59,7 +59,7 @@ public class AdresseModelDB implements DAOAdresse {
 
     @Override
     public boolean removeAdresse(Adresse adresse) {
-        String query = "delete from Adresse where id = ?";
+        String query = "delete from APIADRESSE where id = ?";
         try(PreparedStatement pstm = dbConnect.prepareStatement(query)) {
             pstm.setInt(1,adresse.getId());
             int n = pstm.executeUpdate();
@@ -73,7 +73,7 @@ public class AdresseModelDB implements DAOAdresse {
 
     @Override
     public Adresse updateAdresse(Adresse adresse) {
-        String query = "update Adresse set cp = ?, localite = ?, rue = ?, num = ? where id = ?";
+        String query = "update APIADRESSE set cp = ?, localite = ?, rue = ?, num = ? where id = ?";
         try(PreparedStatement pstm = dbConnect.prepareStatement(query)) {
             pstm.setInt(1,adresse.getCp());
             pstm.setString(2,adresse.getLocalite());
@@ -91,15 +91,15 @@ public class AdresseModelDB implements DAOAdresse {
 
     @Override
     public Adresse readAdresse(int idAdresse) {
-        String query = "select * from Adresse where id = ?";
+        String query = "select * from APIADRESSE where id = ?";
         try(PreparedStatement pstm = dbConnect.prepareStatement(query)) {
             pstm.setInt(1,idAdresse);
             try(ResultSet rs = pstm.executeQuery()) {
                 if(rs.next()){
-                    int cp = rs.getInt("cp");
-                    String localite = rs.getString("localite");
-                    String rue = rs.getString("rue");
-                    String num = rs.getString("num");
+                    int cp = rs.getInt(2);
+                    String localite = rs.getString(3);
+                    String rue = rs.getString(4);
+                    String num = rs.getString(5);
                     return new Adresse(idAdresse,cp,localite,rue,num);
                 } else {
                     logger.error("Record introuvable");
@@ -115,15 +115,15 @@ public class AdresseModelDB implements DAOAdresse {
     @Override
     public List<Adresse> getAdresses() {
         List<Adresse> liste = new ArrayList<>();
-        String query = "select * from Adresse";
+        String query = "select * from APIADRESSE";
         try(PreparedStatement pstm = dbConnect.prepareStatement(query)) {
             try(ResultSet rs = pstm.executeQuery()) {
                 while(rs.next()){
-                    int id = rs.getInt("id");
-                    int cp = rs.getInt("cp");
-                    String localite = rs.getString("localite");
-                    String rue = rs.getString("rue");
-                    String num = rs.getString("num");
+                    int id = rs.getInt(1);
+                    int cp = rs.getInt(2);
+                    String localite = rs.getString(3);
+                    String rue = rs.getString(4);
+                    String num = rs.getString(5);
                     liste.add(new Adresse(id,cp,localite,rue,num));
                 }
                 return liste;

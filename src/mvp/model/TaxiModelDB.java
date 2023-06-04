@@ -24,8 +24,8 @@ public class TaxiModelDB implements DAOTaxi {
 
     @Override
     public Taxi addTaxi(Taxi taxi) {
-        String query1 = "INSERT INTO Taxi(immatriculation, nbreMaxPassagers, prixKm) VALUES (?, ?, ?)";
-        String query2 = "SELECT id FROM Taxi WHERE immatriculation = ?";
+        String query1 = "INSERT INTO APITAXI(immatriculation, nbreMaxPassagers, prixKm) VALUES (?, ?, ?)";
+        String query2 = "SELECT id FROM APITAXI WHERE immatriculation = ?";
         try (PreparedStatement pstm1 = dbConnect.prepareStatement(query1);
              PreparedStatement pstm2 = dbConnect.prepareStatement(query2)) {
             pstm1.setString(1, taxi.getImmatriculation());
@@ -54,7 +54,7 @@ public class TaxiModelDB implements DAOTaxi {
 
     @Override
     public boolean removeTaxi(Taxi taxi) {
-        String query = "DELETE FROM Taxi WHERE id = ?";
+        String query = "DELETE FROM APITAXI WHERE id = ?";
         try (PreparedStatement pstm = dbConnect.prepareStatement(query)) {
             pstm.setInt(1, taxi.getId());
             int n = pstm.executeUpdate();
@@ -67,7 +67,7 @@ public class TaxiModelDB implements DAOTaxi {
 
     @Override
     public Taxi updateTaxi(Taxi taxi) {
-        String query = "UPDATE Taxi SET immatriculation = ?, nbreMaxPassagers = ?, prixKm = ? WHERE id = ?";
+        String query = "UPDATE APITAXI SET immatriculation = ?, nbreMaxPassagers = ?, prixKm = ? WHERE id = ?";
         try (PreparedStatement pstm = dbConnect.prepareStatement(query)) {
             pstm.setString(1, taxi.getImmatriculation());
             pstm.setInt(2, taxi.getNbreMaxPassagers());
@@ -87,7 +87,7 @@ public class TaxiModelDB implements DAOTaxi {
 
     @Override
     public Taxi readTaxi(int idTaxi) {
-        String query = "SELECT * FROM Taxi WHERE id = ?";
+        String query = "SELECT * FROM APITAXI WHERE id = ?";
         try (PreparedStatement pstm = dbConnect.prepareStatement(query)) {
             pstm.setInt(1, idTaxi);
             ResultSet rs = pstm.executeQuery();
@@ -109,14 +109,14 @@ public class TaxiModelDB implements DAOTaxi {
     @Override
     public List<Taxi> getTaxis() {
         List<Taxi> liste = new ArrayList<>();
-        String query = "SELECT * FROM Taxi";
+        String query = "SELECT * FROM APITAXI";
         try (PreparedStatement pstm = dbConnect.prepareStatement(query)) {
             ResultSet rs = pstm.executeQuery();
             while (rs.next()) {
-                int idTaxi = rs.getInt("id");
-                String immatriculation = rs.getString("immatriculation");
-                int nbreMaxPassagers = rs.getInt("nbreMaxPassagers");
-                double prixKm = rs.getDouble("prixKm");
+                int idTaxi = rs.getInt(1);
+                String immatriculation = rs.getString(2);
+                int nbreMaxPassagers = rs.getInt(3);
+                double prixKm = rs.getDouble(4);
                 Taxi taxi = new Taxi(idTaxi, immatriculation, nbreMaxPassagers, prixKm);
                 liste.add(taxi);
             }

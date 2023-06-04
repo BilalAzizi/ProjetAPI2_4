@@ -22,7 +22,12 @@ public class TaxiViewConsole implements TaxiViewInterface {
     @Override
     public void setListeTaxis(List<Taxi> taxis) {
         this.taxis = taxis;
-        afficherListe(taxis);
+        // Petite condition pour éviter un NullPointerException
+        if (taxis != null){
+            afficherListe(taxis);
+        } else {
+            System.out.println("Aucun taxi trouvé");
+        }
         afficherMenu();
     }
 

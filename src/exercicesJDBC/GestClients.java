@@ -192,14 +192,14 @@ public class GestClients {
             int m = sc.nextInt();
             int a = sc.nextInt();
             LocalDate dateDebut = LocalDate.of(a, m, j);
-            pstm.setDate(2, java.sql.Date.valueOf(dateDebut));
+            pstm.setDate(2, Date.valueOf(dateDebut));
 
             System.out.print("Date de fin: ");
             int j1 = sc.nextInt();
             int m1 = sc.nextInt();
             int a1 = sc.nextInt();
             LocalDate dateFin = LocalDate.of(a1, m1, j1);
-            pstm.setDate(3, java.sql.Date.valueOf(dateFin));
+            pstm.setDate(3, Date.valueOf(dateFin));
 
             ResultSet rs = pstm.executeQuery();
             boolean trouve = false;

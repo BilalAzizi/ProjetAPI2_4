@@ -22,7 +22,12 @@ public class LocationViewConsole implements LocationViewInterface {
     @Override
     public void setListeLocations(List<Location> locations) {
         this.locations = locations;
-        afficherListe(locations);
+        //petite condition pour éviter un nullPointerException
+        if (locations != null){
+            afficherListe(locations);
+        } else {
+            System.out.println("Aucune location trouvée");
+        }
         afficherMenu();
     }
 

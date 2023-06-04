@@ -65,16 +65,16 @@ public class ClientViewConsole implements ClientViewInterface {
         System.out.println("Numéro de ligne : ");
         int index = choixElement(clients);
         Client client = clients.get(index - 1);
-        String nom = modifierSiNonVide("Nom", client.getNom());
-        String prenom = modifierSiNonVide("Prénom", client.getPrenom());
-        String mail = modifierSiNonVide("Mail", client.getMail());
-        String tel = modifierSiNonVide("Téléphone", client.getTel());
+        String nom = modifierSiNonVide("Nom :", client.getNom());
+        String prenom = modifierSiNonVide("Prénom :", client.getPrenom());
+        String mail = modifierSiNonVide("Mail :", client.getMail());
+        String tel = modifierSiNonVide("Téléphone :", client.getTel());
         try {
             presenter.update(new Client(client.getId(), nom, prenom, mail, tel));
         } catch (Exception e) {
             System.out.println("Erreur : " + e.getMessage());
         }
-        clients = presenter.getAll(); // Rafraîchissement
+        clients = presenter.getAll();
         afficherListe(clients);
     }
 

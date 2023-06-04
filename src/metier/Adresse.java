@@ -140,4 +140,15 @@ public class Adresse {
     public void setNum(String num) {
         this.num = num;
     }
+
+    @Override
+    public String toString() {
+        return "Adresse{" +
+                "id=" + id +
+                ", cp=" + cp +
+                ", localite='" + localite + '\'' +
+                ", rue='" + rue + '\'' +
+                ", num='" + num + '\'' +
+                '}';
+    }
 }

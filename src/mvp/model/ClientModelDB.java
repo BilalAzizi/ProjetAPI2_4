@@ -5,14 +5,12 @@ import myconnections.DBConnection;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.math.BigDecimal;
 import java.sql.*;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class ClientModelDB implements DAOClient, ClientSpecial {
+public class ClientModelDB implements DAOClient {
     private static final Logger logger = LogManager.getLogger(ClientModelDB.class);
     protected Connection dbConnect;
 
@@ -39,27 +37,27 @@ public class ClientModelDB implements DAOClient, ClientSpecial {
             pstm1.setString(4, client.getTel());
             int n = pstm1.executeUpdate();
             if (n == 1) {
-                pstm2.setString(1, client.getNom());
-                pstm2.setString(2, client.getPrenom());
-                pstm2.setString(3, client.getTel());
+                pstm2.setString(1, client.getMail());
                 ResultSet rs = pstm2.executeQuery();
                 if (rs.next()) {
                     int idclient = rs.getInt(1);
                     client.setId(idclient);
                     return client;
                 } else {
-                    logger.error("record introuvable");
-                    //  System.err.println("record introuvable");
+                    logger.error("Record introuvable");
                     return null;
                 }
-            } else return null;
+            } else {
+                logger.error("Erreur de création");
+                return null;
+            }
 
         } catch (SQLException e) {
-            //System.err.println("erreur sql :"+e);
-            logger.error("erreur sql :" + e);
+            logger.error("Erreur d'insertion : " + e);
             return null;
         }
     }
+
 
     @Override
     public boolean removeClient(Client client) {
@@ -143,7 +141,5 @@ public class ClientModelDB implements DAOClient, ClientSpecial {
             return null;
         }
     }
-
-
 
 }

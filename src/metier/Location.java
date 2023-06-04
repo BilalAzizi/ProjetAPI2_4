@@ -27,6 +27,15 @@ public class Location {
         this.location = location;
     }
 
+    public Location(int idLocation, LocalDate dateLoc, int kmtotal, Client client, Adresse adrDepart) throws Exception {
+        if (kmtotal < 1) throw new Exception("Le kilométrage total doit être supérieur à 0.");
+        this.id = id;
+        this.dateloc = dateloc;
+        this.kmtotal = kmtotal;
+        this.client = client;
+        this.adrDepart = adrDepart;
+    }
+
     public int getId() {
         return id;
     }

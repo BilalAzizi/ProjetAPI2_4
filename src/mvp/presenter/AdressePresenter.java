@@ -20,6 +20,7 @@ public class AdressePresenter {
         this.view.setPresenter(this);
     }
 
+
     public void start() {
         view.setListeAdresses(getAll());
     }

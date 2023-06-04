@@ -1,6 +1,6 @@
 package mvp.model;
 
-import metier.Location;
+import metier.*;
 import myconnections.DBConnection;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -90,42 +90,96 @@ public class LocationModelDB implements DAOLocation {
         }
     }
 
+
     @Override
     public Location readLocation(int idLocation) {
-        String query = "select * from VUELOCATION where idlocation = ?";
-        try(PreparedStatement pstm = dbConnect.prepareStatement(query)){
+        String query = "SELECT * FROM VUE4_CLIENT_ADRESSE_LOCATION WHERE idlocation = ?";
+        try (PreparedStatement pstm = dbConnect.prepareStatement(query)) {
             pstm.setInt(1, idLocation);
             ResultSet rs = pstm.executeQuery();
-            if(rs.next()){
+            if (rs.next()) {
                 int idclient = rs.getInt(1);
                 String mail = rs.getString(2);
                 String nom = rs.getString(3);
                 String prenom = rs.getString(4);
                 String tel = rs.getString(5);
-            }
-            try{
-                Client cl = new Client(idclient,mail,nom,prenom,tel);
+                int idadresse = rs.getInt(6);
+                int cp = rs.getInt(7);
+                String localite = rs.getString(8);
+                String rue = rs.getString(9);
+                String num = rs.getString(10);
+                LocalDate dateloc = rs.getDate(11).toLocalDate();
+                int kmtotal = rs.getInt(12);
 
+                try {
+                    Client client = new Client(idclient, mail, nom, prenom, tel);
+                    Adresse adresse = new Adresse(idadresse, cp, localite, rue, num);
+                    Location location = new Location(idLocation, dateloc, kmtotal, client, adresse);
+                    return location;
+                } catch (Exception e) {
+                    logger.error("Erreur lors de la création des objets : " + e.getMessage());
+                    return null;
+                }
+            } else {
+                logger.error("Record introuvable");
+                return null;
             }
-
         } catch (SQLException e) {
-            System.out.println("Erreur : "+e.getMessage());
+            logger.error("Erreur : " + e.getMessage());
+            return null;
+        }
+    }
+
+
+    @Override
+    public List<Location> getLocations() {
+        List<Location> locations = new ArrayList<>();
+        String query = "SELECT * FROM VUE4_CLIENT_ADRESSE_LOCATION";
+        try (Statement stm = dbConnect.createStatement()) {
+            ResultSet rs = stm.executeQuery(query);
+            while (rs.next()) {
+                int idlocation = rs.getInt(1);
+                int idclient = rs.getInt(2);
+                String mail = rs.getString(3);
+                String nom = rs.getString(4);
+                String prenom = rs.getString(5);
+                String tel = rs.getString(6);
+                int idadresse = rs.getInt(7);
+                int cp = rs.getInt(8);
+                String localite = rs.getString(9);
+                String rue = rs.getString(10);
+                String num = rs.getString(11);
+                LocalDate dateloc = rs.getDate(12).toLocalDate();
+                int kmtotal = rs.getInt(13);
+
+                try {
+                    Client client = new Client(idclient, mail, nom, prenom, tel);
+                    Adresse adresse = new Adresse(idadresse, cp, localite, rue, num);
+                    Location location = new Location(idlocation, dateloc, kmtotal, client, adresse);
+                    locations.add(location);
+                } catch (Exception e) {
+                    logger.error("Erreur lors de la création des objets : " + e.getMessage());
+                    return null;
+                }
+            }
+            return locations;
+        } catch (SQLException e) {
+            logger.error("Erreur : " + e.getMessage());
             return null;
         }
     }
 
     @Override
-    public List<Location> getLocations() {
-
-    }
-
-    @Override
     public List<Location> getLocationsByDateDebut(String dateDebut) {
-
+        //TODO
+        return null;
     }
 
     @Override
     public List<Location> getLocationsByClient(int idClient) {
-
+        //TODO
+        return null;
     }
 }
+
+

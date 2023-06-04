@@ -22,7 +22,12 @@ public class AdresseViewConsole implements AdresseViewInterface {
     @Override
     public void setListeAdresses(List<Adresse> adresses) {
         this.adresses = adresses;
-        afficherListe(adresses);
+        //Petite conditions pour éviter un nullPointerException
+        if(adresses != null) {
+            afficherListe(adresses);
+        } else {
+            System.out.println("Aucune adresse trouvée");
+        }
         afficherMenu();
     }
 

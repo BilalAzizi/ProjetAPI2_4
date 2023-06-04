@@ -140,4 +140,14 @@ public class Taxi {
     public int hashCode() {
         return Objects.hash(immatriculation);
     }
+
+    @Override
+    public String toString() {
+        return "Taxi{" +
+                "id=" + id +
+                ", immatriculation='" + immatriculation + '\'' +
+                ", nbreMaxPassagers=" + nbreMaxPassagers +
+                ", prixKm=" + prixKm +
+                '}';
+    }
 }
